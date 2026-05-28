@@ -347,6 +347,64 @@ const ServicesSection = () => (
   </section>
 );
 
+// ── REEL SHOWCASE ─────────────────────────────────────────────────────────────
+const reels = [
+  { title: "HUSTLE HARD", views: "2.4M", likes: "184K", color: "#B600A8", emoji: "🔥", href: "https://www.instagram.com/reel/DU9X-j3CKKH/", thumb: IMG_153 },
+  { title: "CREATOR MODE", views: "1.1M", likes: "92K", color: "#7621B0", emoji: "⚡", href: "https://www.instagram.com/reel/DWhtRBcoKkR/", thumb: IMG_641 },
+  { title: "GOLDEN HOUR", views: "860K", likes: "71K", color: "#BE4C00", emoji: "🌅", href: "https://www.instagram.com/reel/DXn2fpbigrs/", thumb: IMG_640 },
+  { title: "IKIGAI EDIT", views: "—", likes: "—", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
+];
+const ReelCard = ({ r, delay }) => {
+  const [hov, setHov] = useState(false);
+  return (
+    <FadeIn delay={delay} y={30}>
+      <motion.div onHoverStart={() => setHov(true)} onHoverEnd={() => setHov(false)} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}
+        onClick={() => { if (r.href) window.open(r.href, '_blank', 'noopener,noreferrer'); }}
+        style={{ position: "relative", borderRadius: "24px", overflow: "hidden", cursor: "pointer", aspectRatio: "9/16", background: `linear-gradient(180deg, ${r.color}33 0%, #0C0C0C 100%)`, border: `1px solid ${r.color}40` }}>
+        {r.thumb && (
+          <img src={r.thumb} alt={r.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", zIndex: 1 }} />
+        )}
+        <motion.div animate={{ opacity: hov ? 0.6 : 0 }} style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.5)", zIndex: 2 }} />
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "80px" }}>{r.emoji}</div>
+        <motion.div animate={{ opacity: hov ? 1 : 0, scale: hov ? 1 : 0.8 }} transition={{ duration: 0.2 }}
+          style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 4 }}>
+          <div style={{ width: "64px", height: "64px", borderRadius: "50%", background: "rgba(255,255,255,0.15)", border: "2px solid rgba(255,255,255,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Play size={24} fill="white" color="white" style={{ marginLeft: "4px" }} />
+          </div>
+        </motion.div>
+        <div style={{ position: "absolute", top: "16px", left: "16px", right: "16px", display: "flex", justifyContent: "space-between", zIndex: 4 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "6px", background: "rgba(0,0,0,0.5)", borderRadius: "9999px", padding: "4px 10px" }}>
+            <Instagram size={12} color="#fff" />
+            <span style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.7rem", color: "#fff", fontWeight: 500 }}>Instagram</span>
+          </div>
+        </div>
+        <div style={{ position: "absolute", bottom: "16px", left: "16px", right: "16px", zIndex: 4 }}>
+          <p style={{ fontFamily: "Kanit, sans-serif", fontWeight: 800, fontSize: "1.1rem", color: "#fff", marginBottom: "8px", textTransform: "uppercase" }}>{r.title}</p>
+          <div style={{ display: "flex", gap: "8px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "5px", background: "rgba(0,0,0,0.5)", borderRadius: "9999px", padding: "4px 10px" }}>
+              <Eye size={12} color="#fff" /><span style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.7rem", color: "#fff", fontWeight: 600 }}>{r.views}</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "5px", background: "rgba(0,0,0,0.5)", borderRadius: "9999px", padding: "4px 10px" }}>
+              <Heart size={12} color="#fff" /><span style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.7rem", color: "#fff", fontWeight: 600 }}>{r.likes}</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </FadeIn>
+  );
+};
+
+const ReelShowcaseSection = () => (
+  <section style={{ background: "#0C0C0C", padding: "80px 20px 100px" }}>
+    <FadeIn delay={0} y={40}>
+      <h2 className="hero-heading" style={{ fontFamily: "Kanit, sans-serif", fontWeight: 900, fontSize: "clamp(2.5rem, 10vw, 120px)", textTransform: "uppercase", letterSpacing: "-0.02em", lineHeight: 1, textAlign: "center", marginBottom: "clamp(48px, 6vw, 80px)" }}>Featured Reels</h2>
+    </FadeIn>
+    <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "20px" }}>
+      {reels.map((r, i) => <ReelCard key={i} r={r} delay={i * 0.1} />)}
+    </div>
+  </section>
+);
+
 // ── PROJECTS ──────────────────────────────────────────────────────────────────
 const projects = [
   { title: "NEON HUSTLE REELS", cat: "Short-Form Reels", desc: "Viral Instagram reels for a streetwear brand — hyper-cut transitions, bass-synced audio, and vibrant color grading that drove 2M+ organic views.", color: "#1a0a2e", accent: "#B600A8", emoji: "🎬" },
@@ -443,64 +501,6 @@ const ClientLogosSection = () => {
     </section>
   );
 };
-
-// ── REEL SHOWCASE ─────────────────────────────────────────────────────────────
-const reels = [
-  { title: "HUSTLE HARD", views: "2.4M", likes: "184K", color: "#B600A8", emoji: "🔥", href: "https://www.instagram.com/reel/DU9X-j3CKKH/", thumb: IMG_153 },
-  { title: "CREATOR MODE", views: "1.1M", likes: "92K", color: "#7621B0", emoji: "⚡", href: "https://www.instagram.com/reel/DWhtRBcoKkR/", thumb: IMG_641 },
-  { title: "GOLDEN HOUR", views: "860K", likes: "71K", color: "#BE4C00", emoji: "🌅", href: "https://www.instagram.com/reel/DXn2fpbigrs/", thumb: IMG_640 },
-  { title: "IKIGAI EDIT", views: "—", likes: "—", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
-];
-const ReelCard = ({ r, delay }) => {
-  const [hov, setHov] = useState(false);
-  return (
-    <FadeIn delay={delay} y={30}>
-      <motion.div onHoverStart={() => setHov(true)} onHoverEnd={() => setHov(false)} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}
-        onClick={() => { if (r.href) window.open(r.href, '_blank', 'noopener,noreferrer'); }}
-        style={{ position: "relative", borderRadius: "24px", overflow: "hidden", cursor: "pointer", aspectRatio: "9/16", background: `linear-gradient(180deg, ${r.color}33 0%, #0C0C0C 100%)`, border: `1px solid ${r.color}40` }}>
-        {r.thumb && (
-          <img src={r.thumb} alt={r.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", zIndex: 1 }} />
-        )}
-        <motion.div animate={{ opacity: hov ? 0.6 : 0 }} style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.5)", zIndex: 2 }} />
-        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "80px" }}>{r.emoji}</div>
-        <motion.div animate={{ opacity: hov ? 1 : 0, scale: hov ? 1 : 0.8 }} transition={{ duration: 0.2 }}
-          style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 4 }}>
-          <div style={{ width: "64px", height: "64px", borderRadius: "50%", background: "rgba(255,255,255,0.15)", border: "2px solid rgba(255,255,255,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Play size={24} fill="white" color="white" style={{ marginLeft: "4px" }} />
-          </div>
-        </motion.div>
-        <div style={{ position: "absolute", top: "16px", left: "16px", right: "16px", display: "flex", justifyContent: "space-between", zIndex: 4 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "6px", background: "rgba(0,0,0,0.5)", borderRadius: "9999px", padding: "4px 10px" }}>
-            <Instagram size={12} color="#fff" />
-            <span style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.7rem", color: "#fff", fontWeight: 500 }}>Instagram</span>
-          </div>
-        </div>
-        <div style={{ position: "absolute", bottom: "16px", left: "16px", right: "16px", zIndex: 4 }}>
-          <p style={{ fontFamily: "Kanit, sans-serif", fontWeight: 800, fontSize: "1.1rem", color: "#fff", marginBottom: "8px", textTransform: "uppercase" }}>{r.title}</p>
-          <div style={{ display: "flex", gap: "8px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "5px", background: "rgba(0,0,0,0.5)", borderRadius: "9999px", padding: "4px 10px" }}>
-              <Eye size={12} color="#fff" /><span style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.7rem", color: "#fff", fontWeight: 600 }}>{r.views}</span>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "5px", background: "rgba(0,0,0,0.5)", borderRadius: "9999px", padding: "4px 10px" }}>
-              <Heart size={12} color="#fff" /><span style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.7rem", color: "#fff", fontWeight: 600 }}>{r.likes}</span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </FadeIn>
-  );
-};
-
-const ReelShowcaseSection = () => (
-  <section style={{ background: "#0C0C0C", padding: "80px 20px 100px" }}>
-    <FadeIn delay={0} y={40}>
-      <h2 className="hero-heading" style={{ fontFamily: "Kanit, sans-serif", fontWeight: 900, fontSize: "clamp(2.5rem, 10vw, 120px)", textTransform: "uppercase", letterSpacing: "-0.02em", lineHeight: 1, textAlign: "center", marginBottom: "clamp(48px, 6vw, 80px)" }}>Featured Reels</h2>
-    </FadeIn>
-    <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "20px" }}>
-      {reels.map((r, i) => <ReelCard key={i} r={r} delay={i * 0.1} />)}
-    </div>
-  </section>
-);
 
 // ── FOOTER ────────────────────────────────────────────────────────────────────
 const Footer = () => (
