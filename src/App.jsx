@@ -157,6 +157,13 @@ const ContactButton = ({ label = "Let's Work", href = "https://wa.me/91882596419
   </motion.a>
 );
 
+const LiveProjectButton = ({ label = "View Project" }) => (
+  <motion.button whileHover={{ backgroundColor: "rgba(215,226,234,0.1)" }} whileTap={{ scale: 0.97 }}
+    style={{ border: "2px solid #D7E2EA", borderRadius: "9999px", padding: "10px 28px", color: "#D7E2EA", background: "transparent", fontFamily: "Kanit, sans-serif", fontWeight: 500, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.15em", cursor: "pointer" }}>
+    {label}
+  </motion.button>
+);
+
 const AnimatedText = ({ text, style = {} }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.9", "end 0.3"] });
