@@ -538,10 +538,10 @@ export default function App() {
         <MarqueeSection />
         <AboutSection />
         <ServicesSection />
+        <ReelShowcaseSection />
         <ProjectsSection />
         <TestimonialsSection />
         <ClientLogosSection />
-        <ReelShowcaseSection />
         <Footer />
       </div>
     </>
