@@ -441,12 +441,12 @@ const ProjectsSection = () => (
 
 // ── TESTIMONIALS ──────────────────────────────────────────────────────────────
 const testimonials = [
-  { name: "Aarav Mehta", role: "YouTube Creator · 500K+", text: "Rohit completely transformed my channel aesthetic. The edits are cinematic, the pacing is perfect, and my watch time literally doubled.", stars: 5 },
-  { name: "Priya Sharma", role: "Fashion Brand Founder", text: "Every piece of content he delivered was absolutely premium. Our Instagram engagement skyrocketed and the reels he made went viral multiple times.", stars: 5 },
-  { name: "Kiran Bhat", role: "Digital Marketing Agency", text: "The motion graphics package was insane. Our clients were blown away — it's the kind of quality you'd expect from a high-end studio, not a freelancer.", stars: 5 },
-  { name: "Zara Ahmed", role: "Lifestyle Creator · 1M+", text: "Working with Rohit is effortless. He understands the creator space deeply and delivers edits that perform incredibly well.", stars: 5 },
-  { name: "Dev Nair", role: "Startup Founder", text: "Our launch campaign video got featured by multiple tech blogs. Rohit's storytelling ability and technical skill are genuinely world-class.", stars: 5 },
-  { name: "Meera Rao", role: "Fitness Creator · 200K+", text: "The thumbnail designs alone boosted our CTR by 40%. But the reel edits? Absolutely elite. Every frame is intentional and visually stunning.", stars: 5 },
+  { name: "Moulees Googlies", role: "Instagram Influencer", text: "Made our video look amazing. So happy with how it turned out. Super easy to work with and really fast.", stars: 5 },
+  { name: "Vignes Virat", role: "Youtube Vlogger · 200K+", text: "Best decision hiring him for our promo. He kept things simple and effective. Delivered on time and communication was great.", stars: 5 },
+  { name: "Grocery Bee", role: "Indian Grocery store in Australia", text: "Promo looked way better than I imagined. The pacing was spot on. We saw engagement jump after posting.", stars: 5 },
+  { name: "Annam Express", role: "Catering Company in Australia", text: "Working with Rohit is effortless. He understands the creator space deeply and delivers edits that perform incredibly well.", stars: 5 },
+  { name: "Amit Bhargav", role: "Tamil Actor, Bigg boss S9", text: "Vlog edit clips came out polished and natural. Everyone loved the final cut. Professional, discreet, and great at storytelling.", stars: 5 },
+  { name: "Balaji Mathivanan", role: "Youtuber · 300K+", text: "My channel got more views after the edit. The cuts were tight and watchable. Fair price and a smooth process.", stars: 5 },
 ];
 const TestimonialsSection = () => (
   <section style={{ background: "#0C0C0C", padding: "80px 20px 100px" }}>
