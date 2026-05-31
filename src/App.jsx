@@ -5,6 +5,8 @@ import IMG_153 from "./assets/Image-153.webp";
 import IMG_641 from "./assets/Image-641.webp";
 import IMG_640 from "./assets/Image-640.webp";
 import IKIGAI_THUMB from "./assets/ikigai edit thumbnail.webp";
+import dhur_img from "./assets/dhurandharedit.webp";
+import spdman_img from "./assets/SPIDERMANEDIT.webp";
 // All icons as inline SVGs — no lucide-react version issues
 const Instagram = ({ size = 24, color = "currentColor" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -343,13 +345,12 @@ const ServicesSection = () => (
 
 // ── REEL SHOWCASE ─────────────────────────────────────────────────────────────
 const reels = [
-  { title: "CINEMATIC EDITS", color: "#1a4a8a", emoji: "🎞️", href: "https://www.instagram.com/reel/DY7V92MB3Gf/", thumb: IKIGAI_THUMB },
+  { title: "CINEMATIC EDITS", color: "#1a4a8a", emoji: "🎞️", href: "https://www.instagram.com/reel/DY7V92MB3Gf/", thumb: dhur_img },
   { title: "HUSTLE HARD", color: "#B600A8", emoji: "🔥", href: "https://www.instagram.com/reel/DU9X-j3CKKH/", thumb: IMG_153 },
   { title: "CREATOR MODE", color: "#7621B0", emoji: "⚡", href: "https://www.instagram.com/reel/DWhtRBcoKkR/", thumb: IMG_641 },
   { title: "GOLDEN HOUR", color: "#BE4C00", emoji: "🌅", href: "https://www.instagram.com/reel/DXn2fpbigrs/", thumb: IMG_640 },
   { title: "IKIGAI EDIT", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
-  { title: "IKIGAI EDIT", color: "#1a4a8a", emoji: "🎭", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
-  { title: "MOVIE EDITS", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
+  { title: "MOVIE EDITS", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: spdman_img },
 ];
 const ReelCard = ({ r, delay }) => {
   const [hov, setHov] = useState(false);
