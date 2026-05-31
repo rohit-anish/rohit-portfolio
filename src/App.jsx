@@ -401,11 +401,10 @@ const ReelShowcaseSection = () => (
 
 // ── PROJECTS ──────────────────────────────────────────────────────────────────
 const projects = [
-  { title: "NEON HUSTLE REELS", cat: "Short-Form Reels", desc: "Viral Instagram reels for a streetwear brand — hyper-cut transitions, bass-synced audio, and vibrant color grading that drove 2M+ organic views.", color: "#1a0a2e", accent: "#B600A8", emoji: "🎬" },
-  { title: "RISE & BUILD", cat: "YouTube Documentary", desc: "Long-form storytelling for a business creator — cinematic B-roll, pro-grade color grade, custom motion graphics, and seamless chapter pacing.", color: "#0a1a2e", accent: "#3B82F6", emoji: "▶️" },
-  { title: "PHANTOM TITLES", cat: "Motion Graphics Pack", desc: "Animated title sequences and lower-thirds for a premium creator studio — 3D-inspired typography meets modern kinetic design.", color: "#0a0a1a", accent: "#7621B0", emoji: "✨" },
-  { title: "ELEVATE AGENCY", cat: "Brand Campaign", desc: "Full-suite content package for a digital marketing agency — campaign edits, branded reels, ad creatives, and social-first cut-downs.", color: "#1a1a0a", accent: "#BE4C00", emoji: "🏆" },
-  { title: "GOLDEN HOUR", cat: "Cinematic Storytelling", desc: "Award-worthy travel documentary edit — breathtaking drone footage, cinematic color science, immersive sound design, and emotional narrative arc.", color: "#2e1a0a", accent: "#F59E0B", emoji: "🎞️" },
+  { title: "INSTA REELS", cat: "Short-Form Reels", desc: "Viral Instagram reels for a streetwear brand. Hyper-cut transitions, bass-synced audio, and vibrant color grading. These reels drove over 2 million organic views.", color: "#1a0a2e", accent: "#B600A8", emoji: "🎬" },
+  { title: "YOUTUBE LONG FORM CONTENT", cat: "YouTube Documentary", desc: "Long-form storytelling for a business creator. Cinematic B-roll, pro-grade color work, custom motion graphics, and smooth chapter pacing that keeps viewers hooked.", color: "#0a1a2e", accent: "#3B82F6", emoji: "▶️" },
+  { title: "MOTION GRAPHICS", cat: "Motion Graphics Pack", desc: "Animated title sequences and lower thirds for a premium creator studio. 3D-inspired typography meets kinetic design for a polished, modern look.", color: "#0a0a1a", accent: "#7621B0", emoji: "✨" },
+  { title: "ELEVATE AGENCY", cat: "Brand Campaign", desc: "Full content package for a digital marketing agency. Campaign edits, branded reels, ad creatives, and ready-to-post social cut-downs.", color: "#1a1a0a", accent: "#BE4C00", emoji: "🏆" },
 ];
 const PCard = ({ project, index }) => {
   const ref = useRef(null);
