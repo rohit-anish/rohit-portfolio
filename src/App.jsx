@@ -529,9 +529,9 @@ export default function App() {
       <div style={{ background: "#0C0C0C", overflowX: "clip" }}>
         <HeroSection />
         <MarqueeSection />
+        <ReelShowcaseSection />
         <AboutSection />
         <ServicesSection />
-        <ReelShowcaseSection />
         <TestimonialsSection />
         <ProjectsSection />
         <ClientLogosSection />
