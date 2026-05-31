@@ -343,10 +343,10 @@ const ServicesSection = () => (
 
 // ── REEL SHOWCASE ─────────────────────────────────────────────────────────────
 const reels = [
-  { title: "HUSTLE HARD", views: "2.4M", likes: "184K", color: "#B600A8", emoji: "🔥", href: "https://www.instagram.com/reel/DU9X-j3CKKH/", thumb: IMG_153 },
-  { title: "CREATOR MODE", views: "1.1M", likes: "92K", color: "#7621B0", emoji: "⚡", href: "https://www.instagram.com/reel/DWhtRBcoKkR/", thumb: IMG_641 },
-  { title: "GOLDEN HOUR", views: "860K", likes: "71K", color: "#BE4C00", emoji: "🌅", href: "https://www.instagram.com/reel/DXn2fpbigrs/", thumb: IMG_640 },
-  { title: "IKIGAI EDIT", views: "—", likes: "—", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
+  { title: "HUSTLE HARD", color: "#B600A8", emoji: "🔥", href: "https://www.instagram.com/reel/DU9X-j3CKKH/", thumb: IMG_153 },
+  { title: "CREATOR MODE", color: "#7621B0", emoji: "⚡", href: "https://www.instagram.com/reel/DWhtRBcoKkR/", thumb: IMG_641 },
+  { title: "GOLDEN HOUR", color: "#BE4C00", emoji: "🌅", href: "https://www.instagram.com/reel/DXn2fpbigrs/", thumb: IMG_640 },
+  { title: "IKIGAI EDIT", color: "#1a4a8a", emoji: "🎞️", href: "https://drive.google.com/file/d/1GPjo-ChsJL6RFr8iPtE-tCEvugHl9KJB/view?usp=sharing", thumb: IKIGAI_THUMB },
 ];
 const ReelCard = ({ r, delay }) => {
   const [hov, setHov] = useState(false);
