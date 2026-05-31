@@ -473,7 +473,7 @@ const TestimonialsSection = () => (
 
 // ── CLIENT LOGOS ──────────────────────────────────────────────────────────────
 const ClientLogosSection = () => {
-  const logos = ["NEXGEN", "PIXELHAUS", "VIRALOOP", "BRANDCRAFT", "MOTIONLAB", "CREATIFY", "LUMINOS", "SWELL.CO", "FRAMEUP", "ZYNK"];
+  const logos = ["MOULEES GOOGLIES", "BALAJI MATHIVANAN", "AMIT BHARGAV", "VIGNES VIRAT", "ANNAM EXPRESS", "BROWN DROPS CONFECTIONERS", "GROCERY BEE", "KARMA DOST"];
   const d = [...logos, ...logos, ...logos];
   return (
     <section style={{ background: "#0C0C0C", padding: "40px 0 80px", overflow: "hidden" }}>
